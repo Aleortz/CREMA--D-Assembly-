@@ -1,0 +1,41 @@
+# CREMA-D Assembly - dependencias
+#
+# Instalacion:
+#     python -m venv .venv
+#     .venv\Scripts\activate          (Windows)
+#     source .venv/bin/activate       (Linux / macOS)
+#     pip install -r requirements.txt
+#
+# Probado con Python 3.13.
+
+# ---- Nucleo cientifico ----
+numpy==2.3.5
+pandas==2.3.3
+matplotlib==3.10.8
+
+# ---- Audio ----
+# librosa carga los WAV, normaliza la duracion y calcula MFCC y espectrogramas mel.
+librosa==1.0.0
+soundfile==0.14.0
+
+# ---- Machine learning clasico (Modelos 1 a 4) ----
+# Se fija la version exacta: cambios de version en scikit-learn pueden alterar
+# los resultados y los .pkl entrenados dejan de cargar limpiamente.
+scikit-learn==1.9.1
+joblib==1.6.0
+
+# ---- Deep learning (Modelo 5, CNN) ----
+# Solo hace falta para el Modelo 5. La version instalada aqui es la de CPU.
+#
+# Para CPU (mas liviano, ~200 MB) conviene instalarlo aparte ANTES de este
+# archivo, para no bajar las dependencias de CUDA sin necesidad:
+#     pip install torch --index-url https://download.pytorch.org/whl/cpu
+#
+# Si tienes GPU NVIDIA y quieres usarla, instala la build de CUDA desde
+# https://pytorch.org/get-started/locally/ en vez de la linea de abajo.
+torch>=2.2,<3.0
+
+# ---- Entorno de notebooks ----
+ipython==9.17.1
+jupyterlab==4.6.4
+notebook==7.6.3
