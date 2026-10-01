@@ -1,0 +1,6 @@
+Notebook/features_cremad.csv
+*.npy
+*.pkl
+.venv/
+__pycache__/
+.ipynb_checkpoints/
