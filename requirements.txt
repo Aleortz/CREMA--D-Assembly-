@@ -18,6 +18,10 @@ matplotlib==3.10.8
 librosa==1.0.0
 soundfile==0.14.0
 
+# Grabacion desde el microfono (seccion "Test with a New Audio").
+# Solo hace falta para grabar audio nuevo; el resto del notebook corre sin el.
+sounddevice==0.5.6
+
 # ---- Machine learning clasico (Modelos 1 a 4) ----
 # Se fija la version exacta: cambios de version en scikit-learn pueden alterar
 # los resultados y los .pkl entrenados dejan de cargar limpiamente.

@@ -1,6 +1,10 @@
 Archivos-csv/features_cremad.csv
+Archivos-csv/features_prosodia_cremad.csv
 Notebook/features_cremad.csv
 *.npy
 .venv/
 __pycache__/
 .ipynb_checkpoints/
+
+# Audio grabado con el microfono en la seccion "Test with a New Audio"
+mi_audio.wav

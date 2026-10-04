@@ -1,26 +1,33 @@
 {
     "modelos": [
+        1,
         2,
-        3,
         5
     ],
     "pesos": {
+        "M1": 0.35,
         "M2": 0.25,
-        "M3": 0.25,
-        "M5": 0.5
+        "M5": 0.4
     },
     "criterio": "Mayor Macro F1 en Validation con tolerancia 0.005; entre empatados, menos modelos",
     "busqueda_pesos": {
-        "metodo": "grid search",
+        "metodo": "grid search exhaustivo",
         "paso": 0.05,
         "peso_minimo": 0.05
     },
     "metricas_validation": {
-        "Accuracy": 0.6252,
-        "Macro Precision": 0.6345,
-        "Macro Recall": 0.627,
-        "Macro F1": 0.6224,
-        "Weighted F1": 0.6225
+        "Accuracy": 0.6165,
+        "Macro Precision": 0.6301,
+        "Macro Recall": 0.6155,
+        "Macro F1": 0.6159,
+        "Weighted F1": 0.6166
+    },
+    "representaciones": {
+        "M1": "Prosodia y dinamica temporal (40d, waveform)",
+        "M2": "MFCC + delta + delta2 mean+std (120d)",
+        "M3": "MFCC mean + descriptores espectrales (27d)",
+        "M4": "Todas las caracteristicas tabulares (127d)",
+        "M5": "Espectrograma log-mel 64x94 (CNN)"
     },
     "archivos_modelos": {
         "1": "modelo_m1_svc.pkl",
@@ -28,28 +35,5 @@
         "3": "modelo_m3_rf.pkl",
         "4": "modelo_m4_extratrees_compress.pkl",
         "5": "modelo_m5_cnn.pt"
-    },
-    "hiperparametros": {
-        "M1_SVC": {
-            "C": "1",
-            "gamma": "scale"
-        },
-        "M2_LogReg": {
-            "C": 10.0
-        },
-        "M3_RF": {
-            "n_estimators": 300,
-            "max_depth": 20
-        },
-        "M4_ExtraTrees": {
-            "n_estimators": 500,
-            "max_depth": null,
-            "min_samples_leaf": 1
-        },
-        "M5_CNN": {
-            "epocas_max": 60,
-            "lote": 64,
-            "paciencia": 10
-        }
     }
 }
