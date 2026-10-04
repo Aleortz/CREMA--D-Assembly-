@@ -1,0 +1,2 @@
+Modelo,Representacion,Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted F1
+Uniform_Soft_Voting,M1+M2+M3+M4+M5 (peso 0.20 c/u),0.5858143607705779,0.5997154347617099,0.5866983980756436,0.5772247870850522,0.5779920417256269
