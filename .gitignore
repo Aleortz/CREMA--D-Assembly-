@@ -6,5 +6,7 @@ Notebook/features_cremad.csv
 __pycache__/
 .ipynb_checkpoints/
 
-# Audio grabado con el microfono en la seccion "Test with a New Audio"
-mi_audio.wav
+# Audios de prueba y grabaciones del microfono.
+# OJO: no dejar un .wav en Notebook/ con el nombre de un archivo del dataset:
+# confunde cual se esta clasificando realmente.
+Notebook/*.wav
